@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generals.io Clone</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #game {
+            display: grid;
+            grid-template-columns: repeat(10, 30px);
+            grid-template-rows: repeat(10, 30px);
+            gap: 0;
+            position: relative;
+            cursor: grab; /* Cursor changes when dragging */
+        }
+        #game div {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            background-color: #262626;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #game img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        #turnDisplay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+    <script src="script.js"></script>
+</body>
+</html>
